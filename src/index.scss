@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::placeholder {
+  color: gray;
+}
+
+.image {
+  background-image: url(../public/logo192.png);
+}
+@media (min-resolution: 2dppx) {
+  .image {
+    background-image: url(../public/logo192.png);
+  }
+}
