@@ -1,46 +1,11 @@
-# Getting Started with Create React App
+# craco-dev-template
+基于 craco + react 的应用开发模板
+## Tool Chain
+- craco -> webpack
+- react + ts
+- eslint + prettier
+## issues
+### 包模块规范问题
+`@craco/craco` 依赖 `cosmiconfig` 在项目中寻找各项配置，配置 `cosmiconfig-typescript-loader` 支持 `.ts` 配置，但是由于其版本过低，包模块规范为 `require` 不能 `require` 一个 `ES Module`，而新版 `eslint.config.js` 的 `flat-config` 又依赖 `type: "module"`，so 包之间发生了冲突，无法并存，导致 `build` 时检测不到 `eslint` 配置，亦或上述报错问题   
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+但是后来貌似不知道怎么就解决了
