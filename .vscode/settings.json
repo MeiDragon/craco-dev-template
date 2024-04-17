@@ -169,7 +169,7 @@
   "powermode.shake.enabled": false,
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.useFlatConfig": true,
   "eslint.format.enable": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

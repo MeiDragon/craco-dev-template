@@ -5,23 +5,10 @@ export default [
   eslint.configs.recommended,
   reactRecommended,
   ...tseslint.configs.recommended,
-  // {
-  //   files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
-  //   languageOptions: {
-  //     parserOptions: {
-  //       ecmaFeatures: {
-  //         jsx: true,
-  //       },
-  //     },
-  //     globals: {
-  //       ...globals.browser,
-  //     },
-  //   },
-  //   rules: {
-  //     // ... any rules you want
-  //     'react/jsx-uses-react': 'error',
-  //     'react/jsx-uses-vars': 'error',
-  //   },
-  //   // ... others are omitted for brevity
-  // },
+  {
+    rules: {
+      'react/react-in-jsx-scope': 0,
+      '@typescript-eslint/no-unused-vars': 0,
+    },
+  },
 ]

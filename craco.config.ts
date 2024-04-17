@@ -1,6 +1,7 @@
 
 import { CracoConfig } from '@craco/types'
-const path = require('path')
+// const path = require('path')
+import path from 'path'
 
 const pathResolve = (pathUrl: string) => path.join(__dirname, pathUrl)
 const config: CracoConfig = {
